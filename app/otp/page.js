@@ -59,7 +59,7 @@ export default function OTPPage() {
             minWidth: "300px",
             "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
               {
-                maxWidth: "700px", // Increased font size for specified range
+                maxWidth: "700px",
               },
           }}
         >
@@ -69,8 +69,9 @@ export default function OTPPage() {
             sx={{
               "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
                 {
-                  fontSize: "4rem", // Increased font size for specified range
+                  fontSize: "4rem",
                 },
+              my: 3,
             }}
           >
             OTP
@@ -82,7 +83,7 @@ export default function OTPPage() {
                 {
                   fontSize: "2.0rem", // Increased font size for specified range
                 },
-              marginBottom: "1.0rem",
+              my: 3,
             }}
           >
             Please Enter the OTP you have received on your email
@@ -121,6 +122,7 @@ export default function OTPPage() {
                           style: { textAlign: "center", width: "50px" },
                         }}
                         sx={{
+                          my: 3,
                           "& .MuiOutlinedInput-root": {
                             height: "50px",
                             width: "50px",

@@ -31,8 +31,9 @@ export default function SetPasswordPage() {
           sx={{
             color: "white",
             margin: "0 auto",
+            width: "90%",
             maxWidth: "400px",
-            minWidth: "300px",
+            minWidth: "280px",
             "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
               {
                 maxWidth: "700px", // Increased font size for specified range
@@ -58,7 +59,7 @@ export default function SetPasswordPage() {
                 {
                   fontSize: "2.0rem", // Increased font size for specified range
                 },
-              marginBottom: "1.0rem",
+              my: 3,
             }}
           >
             Please set your new password
@@ -95,7 +96,11 @@ export default function SetPasswordPage() {
                   style: { color: "white" },
                 }}
                 InputLabelProps={{
-                  style: { color: "white" },
+                  sx: {
+                    color: "white",
+                    transform: "translate(14px, 0px) scale(0.75)",
+                    "&.Mui-focused": { color: "white" },
+                  },
                 }}
                 sx={{
                   "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
@@ -126,7 +131,7 @@ export default function SetPasswordPage() {
               <ErrorMessage
                 name="password"
                 component="div"
-                style={{ color: "red" }}
+                style={{ color: "red", minHeight: "20px" }}
               />
               {/* Password Input */}
               <Field
@@ -143,7 +148,11 @@ export default function SetPasswordPage() {
                   style: { color: "white" },
                 }}
                 InputLabelProps={{
-                  style: { color: "white" },
+                  sx: {
+                    color: "white",
+                    transform: "translate(14px, 0px) scale(0.75)",
+                    "&.Mui-focused": { color: "white" },
+                  },
                 }}
                 sx={{
                   "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
@@ -169,12 +178,13 @@ export default function SetPasswordPage() {
                     {
                       border: "none", // Ensure no border on hover
                     },
+                  mt: 3,
                 }}
               />
               <ErrorMessage
                 name="password"
                 component="div"
-                style={{ color: "red" }}
+                style={{ color: "red", minHeight: "20px" }}
               />
 
               {/* Submit Button */}
@@ -183,7 +193,7 @@ export default function SetPasswordPage() {
                 variant="contained"
                 size="large"
                 sx={{
-                  mt: 2,
+                  mt: 3,
                   backgroundColor: "#ec9941",
                   color: "white",
                   "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":

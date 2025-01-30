@@ -17,7 +17,7 @@ export default function DashboardLayout({ children }) {
   };
 
   return (
-    <div className="flex bg-black min-h-screen bg-gray-100">
+    <div className="flex bg-black min-h-screen">
       {/* Sidebar */}
       <aside
         className={`${

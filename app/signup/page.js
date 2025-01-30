@@ -49,11 +49,13 @@ export default function SignUpPage() {
           sx={{
             color: "white",
             margin: "0 auto",
+            width: "90%",
             maxWidth: "400px",
-            minWidth: "300px",
+            minWidth: "280px",
+
             "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
               {
-                maxWidth: "700px", // Increased font size for specified range
+                maxWidth: "700px",
               },
           }}
         >
@@ -63,8 +65,9 @@ export default function SignUpPage() {
             sx={{
               "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                 {
-                  fontSize: "4rem", // Increased font size for specified range
+                  fontSize: "4rem",
                 },
+              my: 3,
             }}
           >
             Sign up
@@ -74,8 +77,9 @@ export default function SignUpPage() {
             sx={{
               "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                 {
-                  fontSize: "2.0rem", // Increased font size for specified range
+                  fontSize: "2.0rem",
                 },
+              mb: 3,
             }}
           >
             If you already have an account,{" "}
@@ -86,8 +90,9 @@ export default function SignUpPage() {
               sx={{
                 "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                   {
-                    fontSize: "2.0rem", // Increased font size for specified range
+                    fontSize: "2.0rem",
                   },
+                mb: 3,
               }}
             >
               Login here!
@@ -128,6 +133,7 @@ export default function SignUpPage() {
                         marginBottom: "2.0rem",
                         marginTop: "2rem",
                       },
+                    mb: 3,
                   }}
                 >
                   <Grid item xs={12} sm={6}>
@@ -142,34 +148,38 @@ export default function SignUpPage() {
                       placeholder="Enter your email"
                       InputProps={{
                         startAdornment: <FiMail className="responsive-icon" />,
-                        style: { color: "white" },
+                        sx: { color: "white" },
                       }}
                       InputLabelProps={{
-                        style: { color: "white" }, // Make label white
+                        sx: {
+                          color: "white",
+                          transform: "translate(14px, 0px) scale(0.75)",
+                          "&.Mui-focused": { color: "white" },
+                        },
                       }}
                       sx={{
                         "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                           {
                             "& .MuiInputBase-input": {
-                              fontSize: "2.0rem", // Increase input text size
+                              fontSize: "2.0rem",
                             },
                             "& .MuiInputLabel-root": {
-                              fontSize: "2.0rem", // Increase label text size
+                              fontSize: "2.0rem",
                             },
                           },
                         "& .MuiOutlinedInput-root": {
-                          borderRadius: "0", // Remove rounded corners
-                          borderBottom: "2px solid white", // Set white bottom border
+                          borderRadius: "0",
+                          borderBottom: "2px solid white",
                         },
                         "& .MuiOutlinedInput-notchedOutline": {
-                          border: "none", // Remove default border
+                          border: "none",
                         },
                         "& .MuiOutlinedInput-root.Mui-focused": {
-                          borderBottom: "2px solid white", // Keep white bottom border on focus
+                          borderBottom: "2px solid white",
                         },
                         "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
                           {
-                            border: "none", // Ensure no border on hover
+                            border: "none",
                           },
                       }}
                     />
@@ -192,34 +202,38 @@ export default function SignUpPage() {
                       placeholder="Enter your phone"
                       InputProps={{
                         startAdornment: <FiPhone className="responsive-icon" />,
-                        style: { color: "white" },
+                        sx: { color: "white" },
                       }}
                       InputLabelProps={{
-                        style: { color: "white" }, // Make label white
+                        sx: {
+                          color: "white",
+                          transform: "translate(14px, 0px) scale(0.75)",
+                          "&.Mui-focused": { color: "white" },
+                        },
                       }}
                       sx={{
                         "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                           {
                             "& .MuiInputBase-input": {
-                              fontSize: "2.0rem", // Increase input text size
+                              fontSize: "2.0rem",
                             },
                             "& .MuiInputLabel-root": {
-                              fontSize: "2.0rem", // Increase label text size
+                              fontSize: "2.0rem",
                             },
                           },
                         "& .MuiOutlinedInput-root": {
-                          borderRadius: "0", // Remove rounded corners
-                          borderBottom: "2px solid white", // Set white bottom border
+                          borderRadius: "0",
+                          borderBottom: "2px solid white",
                         },
                         "& .MuiOutlinedInput-notchedOutline": {
-                          border: "none", // Remove default border
+                          border: "none",
                         },
                         "& .MuiOutlinedInput-root.Mui-focused": {
-                          borderBottom: "2px solid white", // Keep white bottom border on focus
+                          borderBottom: "2px solid white",
                         },
                         "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
                           {
-                            border: "none", // Ensure no border on hover
+                            border: "none",
                           },
                       }}
                     />
@@ -238,8 +252,9 @@ export default function SignUpPage() {
                   sx={{
                     "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                       {
-                        marginBottom: "2.0rem", // Increased font size for specified range
+                        marginBottom: "2.0rem",
                       },
+                    mb: 3,
                   }}
                 >
                   <Grid item xs={12} sm={6}>
@@ -254,35 +269,38 @@ export default function SignUpPage() {
                       placeholder="Enter first name"
                       InputProps={{
                         startAdornment: <FiUser className="responsive-icon" />,
-
-                        style: { color: "white" },
+                        sx: { color: "white" },
                       }}
                       InputLabelProps={{
-                        style: { color: "white" }, // Make label white
+                        sx: {
+                          color: "white",
+                          transform: "translate(14px, 0px) scale(0.75)",
+                          "&.Mui-focused": { color: "white" },
+                        },
                       }}
                       sx={{
                         "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                           {
                             "& .MuiInputBase-input": {
-                              fontSize: "2.0rem", // Increase input text size
+                              fontSize: "2.0rem",
                             },
                             "& .MuiInputLabel-root": {
-                              fontSize: "2.0rem", // Increase label text size
+                              fontSize: "2.0rem",
                             },
                           },
                         "& .MuiOutlinedInput-root": {
-                          borderRadius: "0", // Remove rounded corners
-                          borderBottom: "2px solid white", // Set white bottom border
+                          borderRadius: "0",
+                          borderBottom: "2px solid white",
                         },
                         "& .MuiOutlinedInput-notchedOutline": {
-                          border: "none", // Remove default border
+                          border: "none",
                         },
                         "& .MuiOutlinedInput-root.Mui-focused": {
-                          borderBottom: "2px solid white", // Keep white bottom border on focus
+                          borderBottom: "2px solid white",
                         },
                         "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
                           {
-                            border: "none", // Ensure no border on hover
+                            border: "none",
                           },
                       }}
                     />
@@ -305,34 +323,38 @@ export default function SignUpPage() {
                       placeholder="Enter last name"
                       InputProps={{
                         startAdornment: <FiUser className="responsive-icon" />,
-                        style: { color: "white" },
+                        sx: { color: "white" },
                       }}
                       InputLabelProps={{
-                        style: { color: "white" }, // Make label white
+                        sx: {
+                          color: "white",
+                          transform: "translate(14px, 0px) scale(0.75)",
+                          "&.Mui-focused": { color: "white" },
+                        },
                       }}
                       sx={{
                         "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                           {
                             "& .MuiInputBase-input": {
-                              fontSize: "2.0rem", // Increase input text size
+                              fontSize: "2.0rem",
                             },
                             "& .MuiInputLabel-root": {
-                              fontSize: "2.0rem", // Increase label text size
+                              fontSize: "2.0rem",
                             },
                           },
                         "& .MuiOutlinedInput-root": {
-                          borderRadius: "0", // Remove rounded corners
-                          borderBottom: "2px solid white", // Set white bottom border
+                          borderRadius: "0",
+                          borderBottom: "2px solid white",
                         },
                         "& .MuiOutlinedInput-notchedOutline": {
-                          border: "none", // Remove default border
+                          border: "none",
                         },
                         "& .MuiOutlinedInput-root.Mui-focused": {
-                          borderBottom: "2px solid white", // Keep white bottom border on focus
+                          borderBottom: "2px solid white",
                         },
                         "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
                           {
-                            border: "none", // Ensure no border on hover
+                            border: "none",
                           },
                       }}
                     />
@@ -354,7 +376,7 @@ export default function SignUpPage() {
                       fontSize: "1rem",
                       "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                         {
-                          fontSize: "2rem", // Increase label size on specified screens
+                          fontSize: "2rem",
                         },
                     }}
                   >
@@ -366,19 +388,19 @@ export default function SignUpPage() {
                       control={
                         <Radio
                           sx={{
-                            color: "white", // Default radio button color
+                            color: "white",
                             "&.Mui-checked": {
-                              color: "white", // Outer ring when selected
+                              color: "white",
                             },
                             "&.Mui-checked .MuiSvgIcon-root": {
-                              fill: "white", // Ensures inner dot (tick) is white
+                              fill: "white",
                             },
                             "& .MuiSvgIcon-root": {
-                              color: "white", // Ensures the radio button itself is white
+                              color: "white",
                             },
                             "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                               {
-                                transform: "scale(1.5)", // Scale the radio button for larger size
+                                transform: "scale(1.5)",
                               },
                           }}
                         />
@@ -402,7 +424,7 @@ export default function SignUpPage() {
                             },
                             "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                               {
-                                transform: "scale(1.5)", // Scale the radio button for larger size
+                                transform: "scale(1.5)",
                               },
                           }}
                         />
@@ -413,7 +435,7 @@ export default function SignUpPage() {
                         fontSize: "1rem",
                         "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                           {
-                            fontSize: "2rem", // Increase label size on specified screens
+                            fontSize: "2rem",
                           },
                       }}
                     />
@@ -432,35 +454,40 @@ export default function SignUpPage() {
                   placeholder="Enter your Password"
                   InputProps={{
                     startAdornment: <FiLock className="responsive-icon" />,
-                    style: { color: "white" },
+                    sx: { color: "white" },
                   }}
                   InputLabelProps={{
-                    style: { color: "white" }, // Make label white
+                    sx: {
+                      color: "white",
+                      transform: "translate(14px, 0px) scale(0.75)",
+                      "&.Mui-focused": { color: "white" },
+                    },
                   }}
                   sx={{
+                    mb: 3,
                     "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                       {
                         "& .MuiInputBase-input": {
-                          fontSize: "2.0rem", // Increase input text size
+                          fontSize: "2.0rem",
                         },
                         "& .MuiInputLabel-root": {
-                          fontSize: "2.0rem", // Increase label text size
+                          fontSize: "2.0rem",
                         },
                         marginBottom: "2rem",
                       },
                     "& .MuiOutlinedInput-root": {
-                      borderRadius: "0", // Remove rounded corners
-                      borderBottom: "2px solid white", // Set white bottom border
+                      borderRadius: "0",
+                      borderBottom: "2px solid white",
                     },
                     "& .MuiOutlinedInput-notchedOutline": {
-                      border: "none", // Remove default border
+                      border: "none",
                     },
                     "& .MuiOutlinedInput-root.Mui-focused": {
-                      borderBottom: "2px solid white", // Keep white bottom border on focus
+                      borderBottom: "2px solid white",
                     },
                     "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
                       {
-                        border: "none", // Ensure no border on hover
+                        border: "none",
                       },
                   }}
                 />
@@ -482,35 +509,40 @@ export default function SignUpPage() {
                   placeholder="Confirm your Password"
                   InputProps={{
                     startAdornment: <FiLock className="responsive-icon" />,
-                    style: { color: "white" },
+                    sx: { color: "white" },
                   }}
                   InputLabelProps={{
-                    style: { color: "white" }, // Make label white
+                    sx: {
+                      color: "white",
+                      transform: "translate(14px, 0px) scale(0.75)",
+                      "&.Mui-focused": { color: "white" },
+                    },
                   }}
                   sx={{
+                    mb: 3,
                     "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                       {
                         "& .MuiInputBase-input": {
-                          fontSize: "2.0rem", // Increase input text size
+                          fontSize: "2.0rem",
                         },
                         "& .MuiInputLabel-root": {
-                          fontSize: "2.0rem", // Increase label text size
+                          fontSize: "2.0rem",
                         },
                         marginBottom: "2rem",
                       },
                     "& .MuiOutlinedInput-root": {
-                      borderRadius: "0", // Remove rounded corners
-                      borderBottom: "2px solid white", // Set white bottom border
+                      borderRadius: "0",
+                      borderBottom: "2px solid white",
                     },
                     "& .MuiOutlinedInput-notchedOutline": {
-                      border: "none", // Remove default border
+                      border: "none",
                     },
                     "& .MuiOutlinedInput-root.Mui-focused": {
-                      borderBottom: "2px solid white", // Keep white bottom border on focus
+                      borderBottom: "2px solid white",
                     },
                     "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
                       {
-                        border: "none", // Ensure no border on hover
+                        border: "none",
                       },
                   }}
                 />
@@ -577,8 +609,8 @@ export default function SignUpPage() {
                     color: "white",
                     "@media (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1368px)":
                       {
-                        fontSize: "2.0rem", // Increase button text size
-                        padding: "16px", // Increase button padding
+                        fontSize: "2.0rem",
+                        padding: "16px",
                       },
                   }}
                   type="submit"
@@ -606,17 +638,17 @@ export default function SignUpPage() {
           color: "white",
           borderRadius: "16px",
           overflow: "hidden",
-          position: "relative", // Enable absolute positioning inside the grid
+          position: "relative",
         }}
       >
         <Box
           sx={{
-            position: "absolute", // Position text container absolutely
-            bottom: 0, // Place it at the bottom of the grid
-            width: "100%", // Make it span the entire width
-            textAlign: "center", // Center text horizontally
+            position: "absolute",
+            bottom: 0,
+            width: "100%",
+            textAlign: "center",
             padding: "16px",
-            paddingBottom: "32px", // Add spacing at the bottom
+            paddingBottom: "32px",
           }}
         >
           <Typography variant="h4" fontWeight="bold" mb={3}>

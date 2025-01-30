@@ -40,11 +40,13 @@ export default function LoginPage() {
           sx={{
             color: "white",
             margin: "0 auto",
+            width: "90%",
             maxWidth: "400px",
-            minWidth: "300px",
+            minWidth: "280px",
+
             "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
               {
-                maxWidth: "700px", // Increased font size for specified range
+                maxWidth: "700px",
               },
           }}
         >
@@ -54,7 +56,7 @@ export default function LoginPage() {
             sx={{
               "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
                 {
-                  fontSize: "4rem", // Increased font size for specified range
+                  fontSize: "4rem",
                 },
             }}
           >
@@ -65,8 +67,9 @@ export default function LoginPage() {
             sx={{
               "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
                 {
-                  fontSize: "2.0rem", // Increased font size for specified range
+                  fontSize: "2.0rem",
                 },
+              my: 3,
             }}
           >
             If you don’t have an account,{" "}
@@ -77,8 +80,9 @@ export default function LoginPage() {
               sx={{
                 "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
                   {
-                    fontSize: "2.0rem", // Increased font size for specified range
+                    fontSize: "2.0rem",
                   },
+                my: 3,
               }}
             >
               Register here!
@@ -97,35 +101,38 @@ export default function LoginPage() {
               style={{
                 "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
                   {
-                    transform: "scale(3.0)", // Scale up the entire form on specified screens
+                    transform: "scale(3.0)",
                   },
               }}
             >
-              {/* Email Input */}
               <Field
                 name="email"
                 as={TextField}
                 fullWidth
-                margin="normal"
+                margin="dense"
                 id="email"
                 label="Email"
                 type="email"
                 placeholder="Enter your email address"
                 InputProps={{
                   startAdornment: <FiMail className="responsive-icon" />,
-                  style: { color: "white" }, // Make input text white
+                  sx: { color: "white" },
                 }}
                 InputLabelProps={{
-                  style: { color: "white" }, // Make label white
+                  sx: {
+                    color: "white",
+                    transform: "translate(14px, 0px) scale(0.75)",
+                    "&.Mui-focused": { color: "white" },
+                  },
                 }}
                 sx={{
                   "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
                     {
                       "& .MuiInputBase-input": {
-                        fontSize: "2.0rem", // Increase input text size
+                        fontSize: "2.0rem",
                       },
                       "& .MuiInputLabel-root": {
-                        fontSize: "2.0rem", // Increase label text size
+                        fontSize: "2.0rem",
                       },
                     },
                   "& .MuiOutlinedInput-root": {
@@ -147,25 +154,32 @@ export default function LoginPage() {
               <ErrorMessage
                 name="email"
                 component="p"
-                style={{ color: "red" }}
+                style={{ color: "red", minHeight: "20px" }}
               />
 
-              {/* Password Input */}
               <Field
                 name="password"
                 as={TextField}
                 fullWidth
-                margin="normal"
+                margin="dense"
                 id="password"
                 label="Password"
                 type="password"
                 placeholder="Enter your password"
                 InputProps={{
                   startAdornment: <FiLock className="responsive-icon" />,
-                  style: { color: "white" },
+                  sx: { color: "white" },
                 }}
                 InputLabelProps={{
-                  style: { color: "white" },
+                  sx: {
+                    color: "white",
+                    transform: "translate(14px, 0px) scale(0.75)",
+                    "&.Mui-focused": { color: "white" },
+                    "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
+                      {
+                        marginBottom: "40px", // Adjust for mid-screen sizes
+                      },
+                  },
                 }}
                 sx={{
                   "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
@@ -178,25 +192,27 @@ export default function LoginPage() {
                       },
                     },
                   "& .MuiOutlinedInput-root": {
-                    borderRadius: "0", // Remove rounded corners
-                    borderBottom: "2px solid white", // Set white bottom border
+                    borderRadius: "0",
+                    borderBottom: "2px solid white",
                   },
                   "& .MuiOutlinedInput-notchedOutline": {
-                    border: "none", // Remove default border
+                    border: "none",
                   },
                   "& .MuiOutlinedInput-root.Mui-focused": {
-                    borderBottom: "2px solid white", // Keep white bottom border on focus
+                    borderBottom: "2px solid white",
                   },
                   "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
                     {
-                      border: "none", // Ensure no border on hover
+                      border: "none",
                     },
+                  mt: 3,
                 }}
               />
+
               <ErrorMessage
                 name="password"
-                component="div"
-                style={{ color: "red" }}
+                component="p"
+                style={{ color: "red", minHeight: "20px" }}
               />
 
               {/* Remember Me and Forgot Password */}
@@ -235,13 +251,13 @@ export default function LoginPage() {
                 variant="contained"
                 size="large"
                 sx={{
-                  mt: 2,
+                  mt: 3,
                   backgroundColor: "#ec9941",
                   color: "white",
                   "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
                     {
-                      fontSize: "2.0rem", // Increase button text size
-                      padding: "16px", // Increase button padding
+                      fontSize: "2.0rem",
+                      padding: "16px",
                     },
                 }}
                 type="submit"
@@ -269,17 +285,17 @@ export default function LoginPage() {
           color: "white",
           borderRadius: "16px",
           overflow: "hidden",
-          position: "relative", // Enable absolute positioning inside the grid
+          position: "relative",
         }}
       >
         <Box
           sx={{
-            position: "absolute", // Position text container absolutely
-            bottom: 0, // Place it at the bottom of the grid
-            width: "100%", // Make it span the entire width
-            textAlign: "center", // Center text horizontally
+            position: "absolute",
+            bottom: 0,
+            width: "100%",
+            textAlign: "center",
             padding: "16px",
-            paddingBottom: "32px", // Add spacing at the bottom
+            paddingBottom: "32px",
           }}
         >
           <Typography variant="h4" fontWeight="bold" mb={3}>

@@ -50,6 +50,7 @@ export default function LoginPage() {
               },
           }}
         >
+          <img src="/Logo.svg" alt="Logo" width={100} height={100} />
           <Typography
             variant="h4"
             gutterBottom
@@ -58,6 +59,7 @@ export default function LoginPage() {
                 {
                   fontSize: "4rem",
                 },
+              mt: 3,
             }}
           >
             Sign in

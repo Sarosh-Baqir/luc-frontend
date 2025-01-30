@@ -34,7 +34,7 @@ export default function OTPPage() {
     <Grid
       container
       component="main"
-      sx={{ height: "100vh", backgroundColor: "white", p: 4 }}
+      sx={{ height: "100vh", backgroundColor: "#0F0F11", p: 2 }}
     >
       {/* Left Side */}
       <Grid
@@ -48,19 +48,43 @@ export default function OTPPage() {
           alignItems: "center",
           justifyContent: "center",
           p: 4,
-          backgroundColor: "white",
+          backgroundColor: "#0F0F11",
         }}
       >
         <Box
           sx={{
-            width: "100%",
-            color: "black",
+            color: "white",
+            margin: "0 auto",
+            maxWidth: "400px",
+            minWidth: "300px",
+            "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
+              {
+                maxWidth: "700px", // Increased font size for specified range
+              },
           }}
         >
-          <Typography variant="h4" fontWeight="bold" gutterBottom>
+          <Typography
+            variant="h4"
+            gutterBottom
+            sx={{
+              "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
+                {
+                  fontSize: "4rem", // Increased font size for specified range
+                },
+            }}
+          >
             OTP
           </Typography>
-          <Typography variant="body2" sx={{ mb: 4 }}>
+          <Typography
+            variant="body2"
+            sx={{
+              "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
+                {
+                  fontSize: "2.0rem", // Increased font size for specified range
+                },
+              marginBottom: "1.0rem",
+            }}
+          >
             Please Enter the OTP you have received on your email
           </Typography>
 
@@ -74,7 +98,14 @@ export default function OTPPage() {
             }}
           >
             {({ setFieldValue, values }) => (
-              <Form>
+              <Form
+                style={{
+                  "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
+                    {
+                      transform: "scale(3.0)", // Scale up the entire form on specified screens
+                    },
+                }}
+              >
                 <Grid container spacing={2} justifyContent="center">
                   {Array.from({ length: 6 }).map((_, index) => (
                     <Grid item key={index}>
@@ -93,7 +124,29 @@ export default function OTPPage() {
                           "& .MuiOutlinedInput-root": {
                             height: "50px",
                             width: "50px",
+                            "& fieldset": {
+                              borderColor: "white", // Set border color to white
+                            },
+                            "&:hover fieldset": {
+                              borderColor: "white",
+                            },
+                            "&.Mui-focused fieldset": {
+                              borderColor: "white",
+                            },
                           },
+                          "& .MuiInputBase-input": {
+                            color: "white", // Ensure text color stays white
+                          },
+                          "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
+                            {
+                              "& .MuiInputBase-input": {
+                                fontSize: "2.0rem", // Increase input text size
+                              },
+                              "& .MuiOutlinedInput-root": {
+                                height: "70px", // Increase input box height
+                                width: "70px", // Increase input box width
+                              },
+                            },
                         }}
                         inputRef={(el) => (inputRefs.current[index] = el)}
                         autoFocus={index === 0}
@@ -107,7 +160,16 @@ export default function OTPPage() {
                   fullWidth
                   variant="contained"
                   size="large"
-                  sx={{ mt: 2, backgroundColor: "#1229c2" }}
+                  sx={{
+                    mt: 2,
+                    backgroundColor: "#ec9941",
+                    color: "white",
+                    "@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1368px)":
+                      {
+                        fontSize: "2.0rem", // Increase button text size
+                        padding: "16px", // Increase button padding
+                      },
+                  }}
                   type="submit"
                   className="rounded-3xl"
                 >
@@ -128,25 +190,31 @@ export default function OTPPage() {
         lg={6}
         sx={{
           display: { xs: "none", sm: "none", md: "none", lg: "flex" },
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#050e44",
+          backgroundImage: `url('/KeinTitel.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           color: "white",
           borderRadius: "16px",
           overflow: "hidden",
-          padding: "32px",
+          position: "relative", // Enable absolute positioning inside the grid
         }}
       >
-        <Box textAlign="center">
-          <img
-            src="/Layer_1.png"
-            alt="Learning Platform Illustration"
-            style={{ width: "80%", marginBottom: "16px" }}
-          />
-          <Typography variant="h5" fontWeight="bold">
+        <Box
+          sx={{
+            position: "absolute", // Position text container absolutely
+            bottom: 0, // Place it at the bottom of the grid
+            width: "100%", // Make it span the entire width
+            textAlign: "center", // Center text horizontally
+            padding: "16px",
+            paddingBottom: "32px", // Add spacing at the bottom
+          }}
+        >
+          <Typography variant="h4" fontWeight="bold" mb={3}>
             Sign in to Learning Platform
           </Typography>
-          <Typography variant="body2">Lorem Ipsum is simply</Typography>
+          <Typography variant="body2" mb={3}>
+            Lorem Ipsum is simply
+          </Typography>
         </Box>
       </Grid>
     </Grid>
